@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
-import Library from './Components/Library';
-import ViewMovie from './Components/ViewMovie';
-import AddMovie from './Components/AddMovie';
+import Library from './Components/Views/Library';
+import ViewMovie from './Components/Views/ViewMovie';
+import AddMovie from './Components/Views/AddMovie';
 import './App.css';
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
         </div>
         <Route exact path="/" component={Library}/>
         <Route path="/add" component={AddMovie}/>
-        <Route path="/movie/:id" component={ViewMovie}/>
+        <Route path="/movies/:id" component={ViewMovie}/>
       </div>
    </BrowserRouter>);
   }

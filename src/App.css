@@ -110,7 +110,7 @@
   color: white;
 }
 
-.movie-card .movie-card-header .genre-container {
+.genre-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -250,3 +250,22 @@
 	transition: all 0.2s ease-in;
 }
 
+.movie-header {
+	display: flex;
+	align-items: center;
+}
+
+.movie-header h1 {
+	margin-left: 2rem;
+
+}
+
+.genre-wrap {
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	padding-top: 0;
+	border-radius: 55px;
+	background-color: skyblue;
+	color: white;
+}

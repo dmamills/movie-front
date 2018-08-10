@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
+import autoBind from 'auto-bind';
 
-import SearchBar from './SearchBar';
-import MovieList from './MovieList';
-import Api from '../services/Api';
+import SearchBar from '../SearchBar';
+import MovieList from '../MovieList';
+import Api from '../../services/Api';
 
 class Library extends Component {
 
   constructor(props) {
     super(props);
+    autoBind(this);
     this.state = {
       loading: false,
       movies: []
     };
-
-    this.onSearch = this.onSearch.bind(this);
   }
 
   componentDidMount() {

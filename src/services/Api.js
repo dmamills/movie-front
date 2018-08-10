@@ -20,27 +20,26 @@ class Api {
 
   genres() {
     return this.axios.get('/genres')
-    .then(res => res.data.genres);
+      .then(res => res.data.genres);
   }
 
   actors() {
     return this.axios.get('/actors')
-    .then(res => res.data.actors);
+      .then(res => res.data.actors);
   }
-	createActor(name) {
-		return this.axios.post('/actors', { name })
-			.then(res => res.data.actor);
-	}
+  createActor(name) {
+    return this.axios.post('/actors', { name })
+      .then(res => res.data.actor);
+  }
 
   movie(id) {
      return this.axios.get(`/movies/${id}`)
-      .then(res => res.data);
+      .then(res => res.data.movie);
   }
-	
-	createMovie(data) {
-		return this.axios.post('/movies', data)
-			.then(res => res.data.movie);
-	}
+  createMovie(data) {
+    return this.axios.post('/movies', data)
+      .then(res => res.data.movie);
+  }
 
   movies() {
     return this.axios.get('/movies')

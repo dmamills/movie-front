@@ -1,15 +1,11 @@
 import React, { PureComponent } from 'react';
-
+import autoBind from 'auto-bind';
 
 class SearchBar extends PureComponent {
 
   constructor(prop) {
     super(prop);
-
-    this.setInputRef = this.setInputRef.bind(this);
-    this.setTypeRef = this.setTypeRef.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-    this.keyPressed = this.keyPressed.bind(this);
+    autoBind(this);
   }
 
   setInputRef(input) {
@@ -63,7 +59,6 @@ class SearchBar extends PureComponent {
       </div>
     </div>);
   }
-
 }
 
 export default SearchBar;
