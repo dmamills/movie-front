@@ -7,6 +7,10 @@
   padding: 1rem;
 }
 
+.header a {
+	text-decoration: none;
+}
+
 .header .title {
   color: white;
   font-size: 2rem;
@@ -33,7 +37,7 @@
 }
 
 /* View Containers */
-.movie-create, .movie-detail, .library {
+.movie-create, .movie-detail {
   padding: 2rem;
 }
 
@@ -66,6 +70,8 @@
   background-color: deepskyblue;
   border: 1px solid lightskyblue;
   padding: 0.5rem;
+	color: white;
+	outline: none;
 }
 
 
@@ -73,12 +79,15 @@
 
 .movie-list {
 	justify-content: center;
-  border: 1px solid black;
   display: flex;
   padding: 2rem;
   flex-wrap: wrap;
 }
 
+.movie-list .no-results {
+	font-size: 1.6rem;
+
+}
 
 .movie-card {
   display: flex;
@@ -109,9 +118,15 @@
 	padding-top: 1.5rem;
 }
 
-.movie-card .movie-card-header .genre-icon {
+.genre-icon.small {
 	width: 25px;
 	height: 25px;
+}
+
+.genre-icon.large {
+	width: 50px;
+	height: 50px;
+
 }
 
 .movie-card .movie-card-header span {
@@ -197,5 +212,41 @@
     opacity: 1;
     transform: rotate(359deg);
   }
+}
+
+.movie-create .errors-container {
+	background-color: #EC644B;
+	padding: 0.6rem;
+}
+
+.movie-create .errors-container ul li {
+	color: white;
+
+}
+
+
+.add-form .input-group {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem 0;
+}
+
+.add-form .input-group input[type=text] {
+	padding: 0.5rem;
+}
+
+
+.add-form .input-group button {
+  background-color: skyblue;
+  border: 1px solid lightskyblue;
+  padding: 0.8rem;
+	color: white;
+	outline: none;
+}
+
+.add-form .input-group button:hover {
+	cursor: pointer;
+  background-color: deepskyblue;
+	transition: all 0.2s ease-in;
 }
 

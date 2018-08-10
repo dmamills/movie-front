@@ -10,7 +10,7 @@ class App extends Component {
     return (<BrowserRouter>
       <div>
         <div className="header">
-          <span className="title">Movie Library</span>
+          <Link to="/"><span className="title">Movie Library</span></Link>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/add">Add Movie</Link></li>
